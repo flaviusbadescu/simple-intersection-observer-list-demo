@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/simple-intersection-observer-list-demo/static/css/main.840e0876.css",
+    "main.js": "/simple-intersection-observer-list-demo/static/js/main.6c77f80f.js",
+    "static/js/787.33c0ba20.chunk.js": "/simple-intersection-observer-list-demo/static/js/787.33c0ba20.chunk.js",
+    "index.html": "/simple-intersection-observer-list-demo/index.html",
+    "main.840e0876.css.map": "/simple-intersection-observer-list-demo/static/css/main.840e0876.css.map",
+    "main.6c77f80f.js.map": "/simple-intersection-observer-list-demo/static/js/main.6c77f80f.js.map",
+    "787.33c0ba20.chunk.js.map": "/simple-intersection-observer-list-demo/static/js/787.33c0ba20.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.840e0876.css",
+    "static/js/main.6c77f80f.js"
+  ]
+}
