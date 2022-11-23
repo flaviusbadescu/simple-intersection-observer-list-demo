@@ -85,13 +85,20 @@ const ListInner = <T,>(
     if (loader.current) {
       observer.current.observe(loader.current);
     }
+    return () => {
+      if (loader.current) {
+        observer.current?.unobserve(loader.current);
+      }
+    };
   }, [handleObserver]);
 
   return (
     <div
-      style={
-        height ? { height, overflowY: "auto", display: "flex flex-col" } : {}
-      }
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        ...(height && { height, overflowY: "auto" }),
+      }}
       ref={containerRef}
       className={className}
     >

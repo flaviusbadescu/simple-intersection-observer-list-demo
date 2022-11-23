@@ -7,7 +7,7 @@ export const CharactersList = () => {
   return (
     <div>
       <List
-        className="py-10 px-10 m-auto overflow-y-auto h-[550px] mt-40"
+        className="py-10 px-10 m-auto  mt-40"
         hasMore={hasMore}
         style={{
           display: "flex",
