@@ -19,7 +19,7 @@ export const CharactersList = () => {
         onFetchMore={fetchMore}
         renderItem={(character) => (
           <div className="flex m-2">
-            <img src={character.image} />
+            <img src={character.image} alt={character.name} />
           </div>
         )}
       />

@@ -62,7 +62,7 @@ const ListInner = <T,>(
     if (!hasMore && observer.current) {
       observer.current.disconnect();
     }
-  }, [page, hasMore]);
+  }, [page, hasMore, onFetchMore]);
 
   const handleObserver = useCallback(
     (entries: IntersectionObserverEntry[]) => {
@@ -80,17 +80,17 @@ const ListInner = <T,>(
       rootMargin: "0px",
       threshold: 0,
     };
-
+    const loaderElement = loader.current;
     observer.current = new IntersectionObserver(handleObserver, options);
-    if (loader.current) {
-      observer.current.observe(loader.current);
+    if (loaderElement) {
+      observer.current.observe(loaderElement);
     }
     return () => {
-      if (loader.current) {
-        observer.current?.unobserve(loader.current);
+      if (loaderElement) {
+        observer.current?.unobserve(loaderElement);
       }
     };
-  }, [handleObserver]);
+  }, [handleObserver, loader]);
 
   return (
     <div
